@@ -1,5 +1,14 @@
 # Javascript Object Validator(JsOV)
-## How to use JsOV for validations
+## Installation
+####Using npm
+
+
+####Include this file
+```javascript
+<script type="text/javascript" src="jsOV.js"><script>
+```
+Now you can use `JsOV` object to access various functions.
+## Usage
 
 In its simlplest essence, Javascript Object Validator(JsOV) can be used as
 ```javascript
