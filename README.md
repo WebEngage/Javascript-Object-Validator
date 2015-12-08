@@ -5,7 +5,7 @@
 
 ####Include this file
 ```javascript
-<script type="text/javascript" src="jsOV.js"><script>
+<script type="text/javascript" src="JsOV.js"><script>
 ```
 Now you can use `JsOV` object to access various functions.
 ## Usage
@@ -101,7 +101,7 @@ var Schema = {
     }
 };
 ```
-Now validate function will take these two arguments and will return the following output
+Now `schemaValidator` function will take these two arguments and will return the following output
 ```javascript
 var result = {
     "title": {
