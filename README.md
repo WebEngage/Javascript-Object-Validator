@@ -1,7 +1,5 @@
 # Javascript Object Validator(JsOV)
 ## Installation
-####Using npm
-
 
 ####Include this file
 ```javascript
