@@ -6,7 +6,7 @@ and then, require it
 ```javascript
 var JsOV=require('jsov');
 ```
-#### Include this file
+#### Directly use JsOV.js
 ```javascript
 <script type="text/javascript" src="JsOV.js"><script>
 ```
