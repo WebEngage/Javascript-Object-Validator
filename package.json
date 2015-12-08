@@ -1,0 +1,25 @@
+{
+  "name": "jsov",
+  "version": "1.0.0",
+  "description": "A small JS Object Validator for validating complex nested objects.",
+  "main": "JsOV.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebEngage/Javascript-Object-Validator.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Validator",
+    "Validation",
+    "js"
+  ],
+  "author": "Prashant Agrawal",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/WebEngage/Javascript-Object-Validator/issues"
+  },
+  "homepage": "https://github.com/WebEngage/Javascript-Object-Validator#readme"
+}
