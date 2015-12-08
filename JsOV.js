@@ -98,7 +98,7 @@ var Types={
 
 var JsOV={
 
-    jsOVSchemaValidator :function(Schema, Obj){
+    schemaValidator :function(Schema, Obj){
 
        _GLOBAL_=Obj;
        var jsv={};
