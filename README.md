@@ -1,5 +1,12 @@
 # Javascript Object Validator(JsOV)
-## How to use JsOV for validations
+## Installation
+
+####Include this file
+```javascript
+<script type="text/javascript" src="JsOV.js"><script>
+```
+Now you can use `JsOV` object to access various functions.
+## Usage
 
 In its simlplest essence, Javascript Object Validator(JsOV) can be used as
 ```javascript
@@ -92,7 +99,7 @@ var Schema = {
     }
 };
 ```
-Now validate function will take these two arguments and will return the following output
+Now `schemaValidator` function will take these two arguments and will return the following output
 ```javascript
 var result = {
     "title": {
@@ -225,11 +232,11 @@ There are two ways you can add validations
 You can write a custom function to evaluate your property. 
 E.g consider an object 
 ```javascript
-var obj={
-   'cta':{
-            'type':'DEEP_LINK',
-            'actionLink':'abc'
-        }
+var obj = {
+    'cta': {
+        'type': 'DEEP_LINK',
+        'actionLink': 'abc'
+    }
 }
 ```
 and its schema
@@ -274,6 +281,15 @@ Here **validation 1** will take
 as its argument and **validation 2** will take
 ```javascript
 'DEEP_LINK'
+```
+and
+```javascript
+{
+    'cta': {
+        'type': 'DEEP_LINK',
+        'actionLink': 'abc'
+    }
+}
 ```
 NOTE: here as you can see **validation 2**  function has a second argument. Second argument is optional, which provides you your whole object to perform complex validations.
 
