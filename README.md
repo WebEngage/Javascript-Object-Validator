@@ -234,11 +234,11 @@ There are two ways you can add validations
 You can write a custom function to evaluate your property. 
 E.g consider an object 
 ```javascript
-var obj={
-   'cta':{
-            'type':'DEEP_LINK',
-            'actionLink':'abc'
-        }
+var obj = {
+    'cta': {
+        'type': 'DEEP_LINK',
+        'actionLink': 'abc'
+    }
 }
 ```
 and its schema
@@ -283,6 +283,15 @@ Here **validation 1** will take
 as its argument and **validation 2** will take
 ```javascript
 'DEEP_LINK'
+```
+and
+```javascript
+{
+    'cta': {
+        'type': 'DEEP_LINK',
+        'actionLink': 'abc'
+    }
+}
 ```
 NOTE: here as you can see **validation 2**  function has a second argument. Second argument is optional, which provides you your whole object to perform complex validations.
 
