@@ -328,7 +328,7 @@ var JsOV={
 };
 
 if(typeof module === 'object'){
-    module.exports=JSONV;
+    module.exports=JsOV;
 }
 
 
