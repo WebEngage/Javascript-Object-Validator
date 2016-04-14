@@ -300,8 +300,12 @@ var JsOV={
                 v=this.generate(obj[0],required);
                 Dummy.dataType=v.type;
                 Dummy.data=[];
-                Dummy.data.push(v);
-            }
+                if(v.type==='Object'||v.type==='Array'){
+                    Dummy.data.push(v.data);
+                }else{
+                    Dummy.data.push(v);
+                }
+    }
             else if(getType(obj)==="[object String]"){
                 Dummy.type='String';
                 Dummy.required=required;
