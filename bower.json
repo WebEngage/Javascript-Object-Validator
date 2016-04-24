@@ -1,0 +1,23 @@
+{
+  "name": "jsov",
+  "description": "A small JS Object Validator for validating complex nested objects.",
+  "main": "JsOV.js",
+  "authors": [
+    "Prashant Agrawal"
+  ],
+  "license": "WTFPL",
+  "keywords": [
+    "Javascript",
+    "Validator",
+    "Validation",
+    "js"
+  ],
+  "homepage": "https://github.com/WebEngage/Javascript-Object-Validator",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

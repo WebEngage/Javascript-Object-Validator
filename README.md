@@ -1,7 +1,13 @@
 # Javascript Object Validator(JsOV)
 ## Installation
 #### Using npm
-`npm install --save jsov`
+`$ npm install jsov --save`
+and then, require it
+```javascript
+var JsOV=require('jsov');
+```
+#### Using bower
+`$ bower install jsov --save`
 and then, require it
 ```javascript
 var JsOV=require('jsov');
