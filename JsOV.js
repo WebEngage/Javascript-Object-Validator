@@ -269,7 +269,7 @@ var JsOV={
                         o[i].required=required;
                         o[i].validation='';
                         v={};
-                        v=this.generate(obj[i][0],required);
+                        v=this.generateSchema(obj[i][0],required);
                         o[i].dataType=v.type;
                         o[i].data=[];
                         if(v.type==='Object'||v.type==='Array'){
@@ -281,7 +281,7 @@ var JsOV={
                     }
                     else if(getType(obj[i])==="[object Object]"){
                         v={};
-                        v=this.generate(obj[i],required);
+                        v=this.generateSchema(obj[i],required);
                         o[i]=v;
 
                     }
@@ -297,7 +297,7 @@ var JsOV={
                 Dummy.required=required;
                 Dummy.validation='';
                 v={};
-                v=this.generate(obj[0],required);
+                v=this.generateSchema(obj[0],required);
                 Dummy.dataType=v.type;
                 Dummy.data=[];
                 if(v.type==='Object'||v.type==='Array'){
