@@ -1,6 +1,6 @@
 {
   "name": "jsov",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A small JS Object Validator for validating complex nested objects.",
   "main": "JsOV.js",
   "scripts": {
