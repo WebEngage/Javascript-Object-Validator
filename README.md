@@ -15,7 +15,7 @@ var JsOV=require('jsov');
 or
 #### Directly use JsOV.js
 ```javascript
-<script type="text/javascript" src="JsOV.js"><script>
+<script type='text/javascript' src='JsOV.js'><script>
 ```
 Now you can use `JsOV` object to access various functions.
 ## Usage
@@ -52,7 +52,7 @@ And the schema for the above object is
 ```javascript
 var Schema = {
     'type': 'Object',
-    'reuired': true,
+    'required': true,
     'message': 'Perfectoo',
     'data': {
         'title': {
@@ -63,7 +63,7 @@ var Schema = {
         },
         'variations': {
             'type': 'Array',
-            'reuired': true,
+            'required': true,
             'validation': function(data) {
                 if (data.length > 1)
                     return true;
@@ -114,58 +114,58 @@ var Schema = {
 Now `schemaValidator` function will take these two arguments and will return the following output
 ```javascript
 var result = {
-    "title": {
-        "value": "abc",
-        "valid": true,
-        "message": ""
+    'title': {
+        'value': 'abc',
+        'valid': true,
+        'message': ''
     },
-    "variations": [{
-        "title": {
-            "value": "p1",
-            "valid": true,
-            "message": ""
+    'variations': [{
+        'title': {
+            'value': 'p1',
+            'valid': true,
+            'message': ''
         },
-        "message": "",
-        "cta": {
-            "type": {
-                "value": "DEEP_LINK",
-                "valid": true,
-                "message": ""
+        'message': '',
+        'cta': {
+            'type': {
+                'value': 'DEEP_LINK',
+                'valid': true,
+                'message': ''
             },
-            "actionLink": {
-                "message": "",
-                "valid": true,
-                "value": 'abc'
+            'actionLink': {
+                'message': '',
+                'valid': true,
+                'value': 'abc'
             },
-            "valid": true,
-            "message": ""
+            'valid': true,
+            'message': ''
         },
-        "valid": true
+        'valid': true
     }, {
-        "title": {
-            "value": "p2",
-            "valid": true,
-            "message": ""
+        'title': {
+            'value': 'p2',
+            'valid': true,
+            'message': ''
         },
-        "message": "",
-        "cta": {
-            "type": {
-                "value": "EXTERNAL",
-                "valid": false,
-                "message": ""
+        'message': '',
+        'cta': {
+            'type': {
+                'value': 'EXTERNAL',
+                'valid': false,
+                'message': ''
             },
-            "actionLink": {
-                "message": "",
-                "valid": false
+            'actionLink': {
+                'message': '',
+                'valid': false
             },
-            "valid": false,
-            "message": "",
-            "value": 'https://jsv.com'
+            'valid': false,
+            'message': '',
+            'value': 'https://jsv.com'
         },
-        "valid": false
+        'valid': false
     }],
-    "valid": false,
-    "message": "Perfectoo"
+    'valid': false,
+    'message': 'Perfectoo'
 };
 ```
 As you can see the resultant object gives you capability to drill down to any level to know whether that property is true or false. Plus not only that, if the outcome of a property is false, this information is bubbled up to all its parents upto the object level.e.g
@@ -192,15 +192,15 @@ Below is your Answer
 So what does it take to generate your Schema.
 ```javascript
 var Schema=JsOV.generateSchema(Obj,true);
-JSON.stringify(Schema,null,"\t");
+JSON.stringify(Schema,null,'\t');
 ```
 Yeah, that's it and you are ready with your boilerplate Schema. The first argument is your Object for which you need to generate schema and the second object is whether you want all your fields to be required or not. E.g
 ```javascript
 var Obj={
-    "name":"ABCD",
-    "address":{
-        "street":"Coder's street",
-        "city":"Gotham"
+    'name':'ABCD',
+    'address':{
+        'street':'Coder's street',
+        'city':'Gotham'
     }
 };
 ```
@@ -208,29 +208,29 @@ And your output will be (After using JSON.Stringify)
 
 ```javascript
 {
-	"type": "Object",
-	"required": true,
-	"validation": "",
-	"data": {
-		"name": {
-			"type": "String",
-			"required": true,
-			"validation": ""
+	'type': 'Object',
+	'required': true,
+	'validation': '',
+	'data': {
+		'name': {
+			'type': 'String',
+			'required': true,
+			'validation': ''
 		},
-		"address": {
-			"type": "Object",
-			"required": true,
-			"validation": "",
-			"data": {
-				"street": {
-					"type": "String",
-					"required": true,
-					"validation": ""
+		'address': {
+			'type': 'Object',
+			'required': true,
+			'validation': '',
+			'data': {
+				'street': {
+					'type': 'String',
+					'required': true,
+					'validation': ''
 				},
-				"city": {
-					"type": "String",
-					"required": true,
-					"validation": ""
+				'city': {
+					'type': 'String',
+					'required': true,
+					'validation': ''
 				}
 			}
 		}
@@ -286,8 +286,8 @@ var Schema = {
 Here **validation 1** will take  
 ```javascript
 {
-	"type": "DEEP_LINK",
-	"actionLink": "abc"
+	'type': 'DEEP_LINK',
+	'actionLink': 'abc'
 }
 ```
 as its argument and **validation 2** will take
@@ -317,14 +317,14 @@ Using inbuilt validation properties
 E.g
 ```javascript
 var Schema = {
-    "type": "Object",
-    "reuired": true,
-    "message": "Perfectoo",
-    "data": {
-        "title": {
-            "type": "String",
-            "validation": { //Do it this way
-                "RegEx": "abc"
+    'type': 'Object',
+    'required': true,
+    'message': 'Perfectoo',
+    'data': {
+        'title': {
+            'type': 'String',
+            'validation': { //Do it this way
+                'RegEx': 'abc'
             }
         }
     }
@@ -346,14 +346,14 @@ jsOV.addCustomValidations('MaxLen',function(key,val){
 and then to use this
 ```javascript
 var Schema = {
-    "type": "Object",
-    "reuired": true,
-    "message": "Perfectoo",
-    "data": {
-        "title": {
-            "type": "String",
-            "validation": { //Do it this way
-                "MaxLen": 2
+    'type': 'Object',
+    'required': true,
+    'message': 'Perfectoo',
+    'data': {
+        'title': {
+            'type': 'String',
+            'validation': { //Do it this way
+                'MaxLen': 2
             }
         }
     }
