@@ -201,7 +201,7 @@ var Obj={
     'address':{
         'street':'Coder's street',
         'city':'Gotham'
-    }
+     }
 };
 ```
 And your output will be (After using JSON.Stringify)
