@@ -83,7 +83,7 @@ var Schema = {
                 'cta': {
                     'type': 'Object',
                     'validation': function(cta) {
-                        if (cta.actionlink === 'abc')
+                        if (cta.actionLink === 'abc')
                             return true;
                         else
                             return false;
@@ -333,9 +333,6 @@ var Schema = {
 Just Like RegEx there are various kind of validations that are provided by JSV, below is the list
 
 1. RegEx
-2.  
-3. 
-4. 
 
 NOTE: Incase there is any kind of validation that you want to add to the your custom validation to use them reapeatedly in your projet, you can use.
 
